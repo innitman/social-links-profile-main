@@ -69,6 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-3);
+    list-style-type: none;
 
     & .profile-card-social-link {
       background-color: var(--grey-700);
