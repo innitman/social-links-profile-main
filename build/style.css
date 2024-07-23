@@ -1,0 +1,88 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+}
+
+html {
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+
+  font-family: Inter, var(--font-sans-serif);
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+body {
+  background-color: var(--grey-900);
+  color: white;
+}
+
+.center-the-child {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.profile-card {
+  background-color: var(--grey-800);
+  width: min(384px, 100% - (2 * var(--spacing-4)));
+  border-radius: 8px;
+  text-align: center;
+  padding: var(--spacing-5);
+
+  & .profile-card-avatar {
+    border-radius: 50%;
+    width: 100px;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    margin: var(--spacing-5) auto;
+  }
+
+  & .profile-card-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-block-end: var(--spacing-2);
+  }
+
+  & .profile-card-location {
+    color: var(--green);
+    font-weight: 600;
+    margin-block-end: var(--spacing-5);
+  }
+
+  & .profile-card-tagline {
+    margin-block-end: var(--spacing-5);
+  }
+
+  & .profile-card-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+
+    & .profile-card-social-link {
+      background-color: var(--grey-700);
+      border-radius: 8px;
+      padding: var(--spacing-3);
+      flex: 1;
+      font-weight: 700;
+    }
+
+    & .profile-card-social-link:hover {
+      background-color: var(--green);
+      color: var(--grey-900);
+      cursor: pointer;
+    }
+  }
+}
