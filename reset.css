@@ -8,6 +8,7 @@
 
 /* Prevent font size inflation */
 html {
+  height: 100%;
   text-size-adjust: none;
 }
 
@@ -18,8 +19,7 @@ html {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  min-height: 100svh; /* Safari viewport height bug fix, added by Viral */
+  height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
